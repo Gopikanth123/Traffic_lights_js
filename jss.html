@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.btn{
+    height:40px;
+	width:60px;
+	border-radius:5px;
+	color:white;
+	margin-bottom:10px;
+	background-color:black;
+}
+.box1{
+    padding-top:40px;
+}	
+.box{
+    border:2px solid black;
+	width:100px;
+	height:180px;	
+	text-align:center;
+	border-radius:30px;
+	padding-top:40px;
+	margin-left:50px;
+}
+.flex{
+    display:flex;
+}
+.fl{
+    text-align:center;
+	margin-left:40%;
+}
+.btn1{
+    height:40px;
+	width:50px;
+	border-radius:120px;
+	color:white;
+	margin-bottom:10px;
+	background-color:black;
+	padding-top:25px;
+}	
+</style>
+</head>
+
+<body style="background-color:lightblue";>
+<h1><center>Traffic Light</center></h1>
+<div class="fl">
+<div class="flex">
+<div class="box1">
+<button  class="btn" id="sp" onclick="one()">Stop</button></br>
+<button  class="btn" id="rd" onclick="two()">Ready</button><br>
+<button  class="btn" id="goo" onclick="three()">Go</button>
+</div>
+<div class="box">
+<button  class="btn1" id="sp1"></button></br>
+<button  class="btn1" id="rd1"></button><br>
+<button  class="btn1" id="goo1"></button>
+</div>
+</div>
+</div>
+<script>
+function one(){
+    document.getElementById("sp1").style.backgroundColor="red";
+	document.getElementById("sp").style.backgroundColor="red";
+	document.getElementById("rd1").style.backgroundColor="black";
+	document.getElementById("rd").style.backgroundColor="black";
+	document.getElementById("goo").style.backgroundColor="black";
+	document.getElementById("goo1").style.backgroundColor="black";
+}
+function two(){
+    document.getElementById("rd").style.backgroundColor="yellow";
+	document.getElementById("rd1").style.backgroundColor="yellow";
+	document.getElementById("sp").style.backgroundColor="black";
+	document.getElementById("sp1").style.backgroundColor="black";
+	document.getElementById("goo").style.backgroundColor="black";
+	document.getElementById("goo1").style.backgroundColor="black";
+    
+}
+function three(){
+    document.getElementById("goo").style.backgroundColor="lightgreen";
+	document.getElementById("goo1").style.backgroundColor="lightgreen";
+	document.getElementById("rd1").style.backgroundColor="black";
+	document.getElementById("rd").style.backgroundColor="black";
+	document.getElementById("sp").style.backgroundColor="black";
+	document.getElementById("sp1").style.backgroundColor="black";
+    
+}
+</script>
+</body>
